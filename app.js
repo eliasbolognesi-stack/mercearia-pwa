@@ -18,7 +18,7 @@ document.getElementById('test-offline').addEventListener('click', () => {
   }
 });
 
-const API_URL = 'mercearia-pwa.vercel.app'; // Sua API Render (ex: mercearia-api.onrender.com)
+const API_URL = 'http://localhost:8000'; // Backend local (uvicorn) ou Render URL
 
 // Teste com API pública primeiro
 document.getElementById('call-api').addEventListener('click', async () => {

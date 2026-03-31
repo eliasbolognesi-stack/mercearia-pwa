@@ -19,3 +19,4 @@ GitHub Pages: https://eliasbolognesi-stack.github.io/mercearia-pwa/
 Render FastAPI com CORS.
 
 Servidor local: Instale Python ou VSCode Live Server.
+
