@@ -18,7 +18,7 @@ document.getElementById('test-offline').addEventListener('click', () => {
   }
 });
 
-const API_URL = 'http://localhost:8000'; // Backend local (uvicorn) ou Render URL
+const API_URL = 'http://localhost:8001'; // Backend local (uvicorn port 8001) ou Render
 
 // Teste com API pública primeiro
 document.getElementById('call-api').addEventListener('click', async () => {
