@@ -18,19 +18,25 @@ document.getElementById('test-offline').addEventListener('click', () => {
   }
 });
 
-const API_URL = 'https://SUA-API.vercel.com'; // Replace with your Render URL after deploy
+const API_URL = 'https://SUA-API.onrender.com'; // Sua API Render (ex: mercearia-api.onrender.com)
 
+// Teste com API pública primeiro
 document.getElementById('call-api').addEventListener('click', async () => {
   const responseDiv = document.getElementById('api-response');
   responseDiv.textContent = 'Carregando...';
   
   try {
+    // DESCOMENTE para teste público (simula /api/usuarios)
+    // const response = await fetch('https://jsonplaceholder.typicode.com/users');
+    
+    // SUA API real (comente acima, descomente aqui)
     const response = await fetch(`${API_URL}/api/usuarios`);
+    
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
-    responseDiv.textContent = JSON.stringify(data, null, 2);
+    responseDiv.textContent = `Sucesso! Dados: ${JSON.stringify(data.slice(0,3), null, 2)}`; // Primeiros 3 itens
   } catch (error) {
-    responseDiv.textContent = `Erro: ${error.message} (verifique se API permite CORS)`;
+    responseDiv.textContent = `Erro: ${error.message}\\nDica: Descomente fetch público para teste. Verifique CORS na sua API.`;
   }
 });
 
