@@ -18,7 +18,7 @@ document.getElementById('test-offline').addEventListener('click', () => {
   }
 });
 
-const API_URL = 'https://SUA-API.onrender.com'; // Sua API Render (ex: mercearia-api.onrender.com)
+const API_URL = 'mercearia-pwa.vercel.app'; // Sua API Render (ex: mercearia-api.onrender.com)
 
 // Teste com API pública primeiro
 document.getElementById('call-api').addEventListener('click', async () => {
